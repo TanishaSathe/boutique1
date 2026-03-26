@@ -733,7 +733,10 @@ function createProductCard(product) {
     `;
 
     // ✅ ADD CLICK HERE (IMPORTANT)
-    card.onclick = () => openProduct(product);
+    card.onclick = () => {
+  localStorage.setItem("selectedProduct", JSON.stringify(product));
+  window.location.href = "product.html";
+};
 
     return card;
 }
