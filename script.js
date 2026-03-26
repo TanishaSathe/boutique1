@@ -729,7 +729,7 @@ function createProductCard(product) {
             <h3>${product.name}</h3>
             <p>${product.description}</p>
             <div class="product-price">₹${product.price.toFixed(2)}</div>
-            <button class="add-to-cart" onclick="addToCart(${product.id})">
+            card.onclick = () => openProduct(product);
                 Add to Cart
             </button>
         </div>
