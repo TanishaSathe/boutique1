@@ -1471,3 +1471,25 @@ body {
   cursor: pointer;
   font-size: 20px;
 }
+.product-page {
+  display: flex;
+  gap: 40px;
+  padding: 50px;
+}
+
+.product-img {
+  width: 400px;
+  border-radius: 10px;
+}
+
+.product-details {
+  max-width: 400px;
+}
+
+.sizes button {
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid #000;
+  background: white;
+  cursor: pointer;
+}
