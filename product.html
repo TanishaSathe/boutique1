@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Details</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="product-page">
+  <img id="productImage" class="product-img"/>
+
+  <div class="product-details">
+    <h1 id="productName"></h1>
+    <p id="productPrice"></p>
+
+    <p><strong>Material:</strong> Premium Fabric</p>
+
+    <div class="sizes">
+      <p>Select Size:</p>
+      <button>S</button>
+      <button>M</button>
+      <button>L</button>
+    </div>
+
+    <button onclick="addToCart()">Add to Cart</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+<script>
+  const product = JSON.parse(localStorage.getItem("selectedProduct"));
+
+  document.getElementById("productImage").src = product.image;
+  document.getElementById("productName").innerText = product.name;
+  document.getElementById("productPrice").innerText = "₹" + product.price;
+</script>
+
+</body>
+</html>
