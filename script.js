@@ -1287,21 +1287,3 @@ document.head.appendChild(style);
 
 let selectedProduct = null;
 
-function openProduct(product) {
-  selectedProduct = product;
-
-  document.getElementById("modalImage").src = product.image;
-  document.getElementById("modalName").innerText = product.name;
-  document.getElementById("modalPrice").innerText = "₹" + product.price;
-
-  document.getElementById("productModal").style.display = "block";
-}
-
-function closeProduct() {
-  document.getElementById("productModal").style.display = "none";
-}
-
-function addToCartFromModal() {
-  addToCart(selectedProduct);
-  closeProduct();
-}
