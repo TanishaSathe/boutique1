@@ -302,5 +302,16 @@
     <script src="auth.js"></script>
     <script src="database.js"></script>
     <script src="script.js"></script>
+    <div id="productModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeProduct()">&times;</span>
+
+    <img id="modalImage" />
+    <h2 id="modalName"></h2>
+    <p id="modalPrice"></p>
+
+    <button onclick="addToCartFromModal()">Add to Cart</button>
+  </div>
+</div>
 </body>
 </html>
