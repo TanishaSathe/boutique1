@@ -51,6 +51,17 @@
   document.getElementById("productImage").src = product.image;
   document.getElementById("productName").innerText = product.name;
   document.getElementById("productPrice").innerText = "₹" + product.price;
+  
+  // ✅ ADD THIS LINE HERE
+  document.getElementById("productDescription").innerText = product.description || "";
+
+  function addToCart() {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart.push(product);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert("Added to cart!");
+  }
+</script>
 
   function addToCart() {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
