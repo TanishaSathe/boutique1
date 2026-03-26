@@ -8,23 +8,39 @@
 <body>
 
 <div class="product-page">
-  <img id="productImage" class="product-img"/>
 
-  <div class="product-details">
+  <!-- LEFT SIDE -->
+  <div class="product-left">
+    <img id="productImage" class="product-img"/>
+  </div>
+
+  <!-- RIGHT SIDE -->
+  <div class="product-right">
     <h1 id="productName"></h1>
-    <p id="productPrice"></p>
+    <h2 id="productPrice"></h2>
 
-    <p><strong>Material:</strong> Premium Fabric</p>
+    <p class="product-desc">
+      Elegant premium outfit designed for comfort and sophistication.
+    </p>
+
+    <div class="product-details">
+      <p>• Relaxed fit</p>
+      <p>• Premium fabric</p>
+      <p>• Side pockets</p>
+      <p>• Made in India</p>
+    </div>
 
     <div class="sizes">
       <p>Select Size:</p>
       <button>S</button>
       <button>M</button>
       <button>L</button>
+      <button>XL</button>
     </div>
 
-    <button onclick="addToCart()">Add to Cart</button>
+    <button class="add-btn" onclick="addToCart()">Add to Cart</button>
   </div>
+
 </div>
 
 <script src="script.js"></script>
