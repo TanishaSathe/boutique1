@@ -719,24 +719,24 @@ function renderProducts() {
     });
 }
 
-// Create product card
 function createProductCard(product) {
     const card = document.createElement('div');
     card.className = 'product-card';
+
     card.innerHTML = `
         <img src="${product.image}" alt="${product.name}">
         <div class="product-info">
             <h3>${product.name}</h3>
             <p>${product.description}</p>
             <div class="product-price">₹${product.price.toFixed(2)}</div>
-            card.onclick = () => openProduct(product);
-                Add to Cart
-            </button>
         </div>
     `;
+
+    // ✅ ADD CLICK HERE (IMPORTANT)
+    card.onclick = () => openProduct(product);
+
     return card;
 }
-
 // Add to cart
 function addToCart(productId) {
     const product = products.find(p => p.id === productId);
